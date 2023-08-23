@@ -3,7 +3,7 @@ export const API_URL = (production) ? "https://api.bitspace.org.in" : "http://lo
 
 export const CLIENT_URL = (production) ? "https://bitspace.org.in" : "http://localhost:3000"
 
-export const GITHUB_OAUTH_REDIRECT_URL = production ? CLIENT_URL + "/api/auth/callback" : CLIENT_URL + "/api/auth/callback";
+export const GITHUB_OAUTH_REDIRECT_URL = CLIENT_URL + "/api/auth/callback"
 
 export const GITHUB_OAUTH_AUTH_URL = "https://github.com/login/oauth/authorize";
 

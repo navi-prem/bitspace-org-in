@@ -3,7 +3,7 @@ import { Header } from "@/libs/components/layouts/header";
 import "./globals.css";
 import "../libs/assets/fonts/Inter/inter.css";
 import { useUserStore } from "@/libs/stores";
-import { useCookies } from 'next-client-cookies';
+import Cookies from 'js-cookie';
 import axios from "axios";
 import { API_URL } from "@/libs/constants";
 import { useEffect, useState } from "react";
@@ -13,9 +13,8 @@ export default function RootLayout({
 }: {
     children: React.ReactNode;
 }) {
-    const cookies = useCookies();
+    const accessToken = Cookies.get("bs_access_token");
 
-    const accessToken = cookies.get("bs_access_token");
     const userStore = useUserStore((state) => state.user);
     const setUserStore = useUserStore((state) => state.setUser);
 
