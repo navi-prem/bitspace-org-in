@@ -7,13 +7,13 @@ import Memcomp from "@/libs/components/admin/Memcomp";
 
 const Admin = () => {
 
-    useEffect(()=>{
+    useEffect(() => {
         const getData = async () => {
-            const  { data } = await axios.get(`${API_URL}/admin`)
+            const { data } = await axios.get(`${API_URL}/admin`, { withCredentials: true })
             setData(data)
         }
         getData()
-    },[])
+    }, [])
 
     const [data, setData] = useState<Array<Rank>>([])
 
@@ -24,13 +24,13 @@ const Admin = () => {
         </div>
         <div className="pt-20">
             {
-                data.map(( rank , idx )=>{
+                data.map((rank, idx) => {
                     return (<>
                         <div key={idx} className="flex flex-col items-center w-[97vw]">
-                            <div className="text-3xl font-bold">{ rank.r_name }</div>
-                            { rank.Users.map((user, idx)=>(
-                                <Memcomp {...user} key={idx}/>
-                            )) }
+                            <div className="text-3xl font-bold">{rank.r_name}</div>
+                            {rank.Users.map((user, idx) => (
+                                <Memcomp {...user} key={idx} />
+                            ))}
                         </div>
                     </>)
                 })
