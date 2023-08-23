@@ -1,5 +1,5 @@
 "use client"
-import API_URL from "@/libs/API_URL";
+import API_URL from "@/libs/constants";
 import Memcomp from "@/libs/Memcomp";
 import axios from "axios";
 import { useEffect, useState } from "react"

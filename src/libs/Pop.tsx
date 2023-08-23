@@ -1,7 +1,7 @@
 import CloseIcon from '@mui/icons-material/Close';
 import axios from 'axios';
 import { useState } from 'react';
-import API_URL from './API_URL';
+import API_URL from './constants';
 
 const Pop = ({show,setShow,data,setBan} : {
         show:boolean,
