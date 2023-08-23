@@ -88,6 +88,7 @@ export default function RootLayout({
 
                 <link rel="icon" href="/app/favicon.ico" />
                 <link rel="apple-touch-icon" href="/app/logo192.png" />
+                <link rel="manifest" href="/app/manifest.json" />
             </head>
             <body className="bg-white relative flex flex-col items-stretch font-inter">
                 {loading ? (
