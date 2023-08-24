@@ -1,5 +1,5 @@
 'use client'
-import API_URL from "@/libs/constants"
+import { API_URL } from "@/libs/constants"
 import axios from "axios"
 import { ChangeEventHandler, useEffect, useState, ChangeEvent, FormEventHandler } from "react"
 import Image from "next/image"
@@ -9,13 +9,28 @@ import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
 import AddSharpIcon from '@mui/icons-material/AddSharp';
 import EditIcon from '@mui/icons-material/Edit';
 import Link from 'next/link'
+import { User, Role } from "@/libs/utills/types"
 
 const AdminProfile = ({ params }: { params: { id: string } }) => {
     const { id } = params
-    const [data, setData] = useState(null)
+    const [data, setData] = useState<User>({
+        id: "",
+        username: "",
+        rank: 123,
+        is_ban: false,
+        title: "Founder/President",
+        is_joined_discord: true,
+        created_at: new Date(Date.now()),
+        discord_id: "",
+        github_id: "",
+        strike: 0,
+        points: 0,
+        Role: [],
+        init: "",
+})
     const [show, setShow] = useState(false)
-    const [curr, setCurr] = useState(data)
-    const [roles, setRoles] = useState([])
+    const [curr, setCurr] = useState<User>(data)
+    const [roles, setRoles] = useState<Role[]>([])
     const [current, setCurrent] = useState('')
 
     const call = async () => {
@@ -53,7 +68,7 @@ const AdminProfile = ({ params }: { params: { id: string } }) => {
 
     const handle =  (e: React.SyntheticEvent) => {
         e.preventDefault()
-        let lst = []
+        let lst: Role[] = []
         curr.Role.forEach(ele => {
             lst.push({ ...ele, username: curr.username })
         })
@@ -63,7 +78,7 @@ const AdminProfile = ({ params }: { params: { id: string } }) => {
     }
 
     const handleClose = (index: number) => {
-        setCurr(e => {
+        setCurr((e: User) => {
             return {
                 ...e, Role: [...e.Role.slice(0, index), ...e.Role.slice(index + 1)]
             }
@@ -71,7 +86,7 @@ const AdminProfile = ({ params }: { params: { id: string } }) => {
     }
 
     const handleRankChange = (event: ChangeEvent<HTMLInputElement>) => {
-        setCurr(e => {
+        setCurr((e: User) => {
             return {
                 ...e, rank: event.target.value
             }
@@ -79,7 +94,7 @@ const AdminProfile = ({ params }: { params: { id: string } }) => {
     }
 
     const handleNameChange = (event: ChangeEvent<HTMLInputElement>) => {
-        setCurr(e => {
+        setCurr((e: User) => {
             return {
                 ...e, github_id: event.target.value
             }
@@ -87,7 +102,7 @@ const AdminProfile = ({ params }: { params: { id: string } }) => {
     }
 
     const handleTitleChange = (event: ChangeEvent<HTMLInputElement>) => {
-        setCurr(e => {
+        setCurr((e: User) => {
             return {
                 ...e, title: event.target.value
             }
@@ -95,7 +110,7 @@ const AdminProfile = ({ params }: { params: { id: string } }) => {
     }
 
     const handleGithubChange = (event: ChangeEvent<HTMLInputElement>) => {
-        setCurr(e => {
+        setCurr((e: User) => {
             return {
                 ...e, username: event.target.value
             }
@@ -103,7 +118,7 @@ const AdminProfile = ({ params }: { params: { id: string } }) => {
     }
 
     const handleDiscordChange = (event: ChangeEvent<HTMLInputElement>) => {
-        setCurr(e => {
+        setCurr((e: User) => {
             return {
                 ...e, discord_id: event.target.value
             }
@@ -111,7 +126,7 @@ const AdminProfile = ({ params }: { params: { id: string } }) => {
     }
 
     const handlePoints = (event: ChangeEvent<HTMLInputElement>) => {
-        setCurr(e => {
+        setCurr((e: User) => {
             return {
                 ...e, points: event.target.value
             }
@@ -133,7 +148,7 @@ const AdminProfile = ({ params }: { params: { id: string } }) => {
         fetch()
     }, [id])
 
-    if (!data) return null
+    if (data.rank === 123) return null
 
     if (typeof data === "string") return (
         <div className="w-full h-full text-center">USER NOT JOINED DISCORD YET...</div>
