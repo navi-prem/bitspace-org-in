@@ -20,11 +20,12 @@ const AuthCallBackPage = () => {
                 setMsg("SIGNING IN");
                 const { data } = await axios.get(API_URL + "/me", { withCredentials: true });
                 if (!data) {
-                    const { data: user } = await axios.post(API_URL + "/me", {}, { withCredentials: true });
                     setMsg("CREATING USER");
+                    const { data: user } = await axios.post(API_URL + "/me", {}, { withCredentials: true });
                     userStore(user);
-                };
-                userStore(data);
+                } else {
+                    userStore(data);
+                }
                 router.push("/")
             } catch (error) {
                 console.error("Authentication error:", error);
