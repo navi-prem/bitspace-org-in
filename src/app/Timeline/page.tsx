@@ -33,7 +33,7 @@ const Timeline = () => {
             <div className="h-full w-full overflow-y-scroll rtl">
                 {data.map((ele, idx) => (
                     <div key={idx} className="ltr pb-5 border-l-[20px] boder-black">
-                        <div className="mb-5 pt-5 -ml-5 pl-5 font-black border-l-[20px] border-accent">
+                        <div className="mb-5 pt-5 -ml-[20px] pl-5 font-black border-l-[20px] border-accent">
                             <span className="text-5xl">{ele.year}</span>
                         </div>
                         <div key={idx}>
