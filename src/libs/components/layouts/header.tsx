@@ -50,11 +50,11 @@ export function Header() {
             </div>
             <nav className="gap-10 w-4/6 flex flex-row items-center justify-center">
                 <NavLink href="/">HOME</NavLink>
-                <NavLink href="/events">EVENTS</NavLink>
-                <NavLink href="/timeline">TIMELINE</NavLink>
+                <NavLink href="/Events">EVENTS</NavLink>
+                <NavLink href="/Timeline">TIMELINE</NavLink>
                 <NavLink href="/FAQ">FAQ</NavLink>
-                <NavLink href="/socials">SOCIALS</NavLink>
-                <NavLink href="/team">TEAM</NavLink>
+                <NavLink href="/Socials">SOCIALS</NavLink>
+                <NavLink href="/Team">TEAM</NavLink>
             </nav>
             <div className="w-1/6 flex flex-col items-end justify-center">
                 {!userStore ? <button onClick={handleProfile} className="bg-accent px-8 font-black py-2 text-sm border-2 border-black">
