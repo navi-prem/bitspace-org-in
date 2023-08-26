@@ -9,7 +9,7 @@
 }
 
 .text-box {
-    @apply bg-white border border-black border-[4px] p-3 m-2 rounded text-center font-bold
+  @apply bg-white border border-black border-[4px] p-3 m-2 rounded text-center font-bold;
 }
 
 @font-face {
@@ -117,4 +117,8 @@ rtl {
     /* transform: scaleY(0); */
     /* opacity: 0; */
   }
+}
+
+.jos-shrink {
+  transform: scale(1.1);
 }
