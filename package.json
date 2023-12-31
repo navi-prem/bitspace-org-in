@@ -27,6 +27,7 @@
     "cookies-next": "^3.0.0",
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.7",
+    "fernet": "^0.4.0",
     "framer-motion": "^10.15.1",
     "html-react-parser": "^4.2.0",
     "jos-animation": "^0.8.8",
@@ -43,5 +44,8 @@
     "tailwindcss": "3.3.2",
     "typescript": "5.1.6",
     "zustand": "^4.4.1"
+  },
+  "devDependencies": {
+    "@types/fernet": "^0.4.3"
   }
 }

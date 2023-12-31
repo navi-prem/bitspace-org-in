@@ -50,9 +50,7 @@ export function Header() {
             </div>
             <nav className="flex flex-row items-center justify-center w-4/6 gap-10">
                 <NavLink href="/">HOME</NavLink>
-                <NavLink href="/events">EVENTS</NavLink>
                 <NavLink href="/timeline">TIMELINE</NavLink>
-                <NavLink href="/faq">FAQ</NavLink>
                 <NavLink href="/socials">SOCIALS</NavLink>
                 <NavLink href="/team">TEAM</NavLink>
             </nav>

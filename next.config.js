@@ -6,10 +6,11 @@ const nextConfig = {
     env: {
         GITHUB_CLIENT_ID: process.env.GITHUB_CLIENT_ID,
         PRODUCTION: process.env.PRODUCTION,
+        FERNET_SALT: process.env.FERNET_SALT,
     },
-    images : {
+    images: {
         domains: ["github.com", "media.discordapp.net", "avatars.githubusercontent.com"],
-        remotePatterns : [
+        remotePatterns: [
             {
                 protocol: 'https',
                 hostname: 'cdn.discordapp.com',

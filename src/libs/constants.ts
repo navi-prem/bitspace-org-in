@@ -5,6 +5,8 @@ export const CLIENT_URL = (production) ? "https://bitspace.org.in" : "http://loc
 
 export const GITHUB_OAUTH_REDIRECT_URL = CLIENT_URL + "/api/auth/callback"
 
+export const JOIN_DISCORD_URL = (production) ? "https://join.bitspace.org.in" : "http://localhost:4200";
+
 export const GITHUB_OAUTH_AUTH_URL = "https://github.com/login/oauth/authorize";
 
 export const GITHUB_OAUTH_CLIENT_ID = process.env.GITHUB_CLIENT_ID;

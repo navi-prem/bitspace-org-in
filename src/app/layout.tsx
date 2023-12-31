@@ -105,6 +105,7 @@ export default function RootLayout({
                 <meta property="og:locale:alternate" content="en_US" />
 
                 <link rel="icon" href="./favicon.ico" />
+                <script src="fernetBrowser.js"></script>
             </head>
             <body className="relative flex flex-col items-stretch bg-white font-inter">
                 {loading ? (

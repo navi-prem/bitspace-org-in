@@ -17,7 +17,7 @@ function Landing() {
                 >
                     EVERY BIT IS
                     <br />
-                    <span className="text-accent relative">
+                    <span className="pr-3 text-accent relative">
                         OPEN
                         <Underline />
                     </span>
@@ -138,7 +138,7 @@ function About() {
                     >
                         <Bullet name="FRONTEND" color="rgb(233 138 138)" />
                         <Bullet name="BACKEND" color="rgb(98 135 231)" />
-                        <Bullet name="BACKEND" color="rgb(148 130 218)" />
+                        <Bullet name="DEVOPS" color="rgb(148 130 218)" />
                         <Bullet name="DBMS" color="rgb(138 233 176)" />
                     </div>
                     <div
@@ -162,7 +162,7 @@ function About() {
                         className="text-4xl font-inter font-bold text-center jos"
                         data-jos_rootmargin_top="0%"
                     >
-                        This organization strives to empower young coders, foster
+                        This organisation strives to empower young coders, foster
                         innovation, and inspire the next generation of{" "}
                         <span className="text-accent">technology</span> leaders. Through
                         open <span className="text-[#E98A8A]">collaboration</span> and
@@ -254,7 +254,7 @@ export default function Page() {
                         data-jos_scrolldirection="down"
                         data-jos_rootmargin_top="0%"
                     >
-                        *HOW DO WE ACHIVE IT?
+                        *HOW DO WE ACHIEVE IT?
                     </div>
                     <div
                         className="relative jos"
@@ -665,7 +665,7 @@ export default function Page() {
                         data-jos_duration="0.2"
                         data-jos_rootmargin_top="0%"
                     >
-                        Our experienced mentors provide personalized guidance, nurturing
+                        Our experienced mentors provide personalised guidance, nurturing
                         talents, and helping students overcome coding challenges.
                     </div>{" "}
                 </div>
