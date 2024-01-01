@@ -94,7 +94,7 @@ const Me = () => {
                 </div>
                 {data.discord_id ? (
                     <>
-                        <div className="mb-6 -mt-2 font-bold text-accent text-xl">&quot; {data.title} &quot;</div>
+                        <div className="mb-6 -mt-2 font-bold text-accent text-xl">&#34; {data.title} &#34;</div>
                         <div className="mb-6 flex flex-row gap-2">
                             {data.Role.map(((value, idx) => (
                                 <div key={idx} className="bg-[#DED6FE] rounded-full px-2 flex flex-row items-center justify-center">
